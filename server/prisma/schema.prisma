@@ -1,0 +1,184 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id        String   @id @default(cuid())
+  username  String   @unique
+  email     String?  @unique
+  password  String
+  name      String   @default("Mandir Admin")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model SiteSettings {
+  id                   Int      @id @default(1)
+  mandirName           String   @default("Sri Sri Sarbojanin Durga Puja")
+  invitationTitle      String   @default("Puja Invitation")
+  bangabdaYear         String   @default("1431 Bangabda")
+  heroBadge            String   @default("Sharodiya Maha Utsav")
+  heroHeading          String   @default("Sri Sri Sharodotsav Mandir Nimontron")
+  heroDescription      String   @default("You and your family are cordially invited to the 42nd Annual Autumnal Sanctum Celebration.")
+  heroImage            String   @default("https://lh3.googleusercontent.com/aida-public/AB6AXuA_ye281hwxzD13wojKbAiM_2Eul_BJZw3ZMhWoGP_cGnza7GVIyZAblszm7gvrKmu8vwD7CZKR3-XzqswBYGqIs3FRXLgGIVm9cOwV68Yp5K-Zs3xgUWExs8Fxi66oPajYYBcwGySZoX4ba-JNkZzRoxDnhuWi9iidtGZFheB-O3WktXZJHywzOjN6gA_mBeBQSf-pYQucbFJ1tkSD0AfJnRBU7hYe_pNPNDpq0DxG7h6ZosBWNBXgtA")
+  logoImage            String   @default("https://lh3.googleusercontent.com/aida-public/AB6AXuBWjzNgGYLeZXEQvCUQQTjVIaJ4RuNwA6Dj3GVnKCyTRQ0Wunp042wB3EQzU2ylQNOQOZ8IfT9hiC0by2a8BEgZ7btvm_FjVnysBdqB0Tk4RET2mUEunfVEcOPTCb287JZie0EIFlLqVdfrP8b3Hzdh45UVsNrAp5NIlTiAnkfy9phz_Rw_r4hEwwuc6-ZHFMCKiG6x5E87vodBOQ-UeazgCIThXd471vRQY4CLXD2dGXtexrxfUrZ8eQ")
+  locationName         String   @default("Ballygunge, Kolkata")
+  fullAddress          String   @default("24A Ballygunge Circular Rd, Kolkata, West Bengal, India")
+  googleMapsUrl        String   @default("https://maps.google.com/?q=24A+Ballygunge+Circular+Road,+Kolkata")
+  mapImage             String   @default("https://lh3.googleusercontent.com/aida-public/AB6AXuA9QqkqMCw-La0I_YiY2Vmfgx5znXI-hHWpxqIOhmB0nuDhyGMr7gK8QE174H6tnALki3lPK2gFszTcR4AZUQF_q6iy0LQ8Zmg5eyDf7QZ0of3THleXIDcB-aj4ild_dMv3dJO9nVDp-IbwXNak3cRm1QT5t3b5OLaPhdyjY8ntFHbjqzloNMGLeiTP5bZKxCO5Axp8KW-LYLlpa0aHpGkd8RZjqfzPgDPE3HCTHwvxN9MFDuUm2OApJQ")
+  countdownTitle       String   @default("Maha Sasthi Countdown")
+  countdownDays        Int      @default(4)
+  countdownHours       Int      @default(18)
+  countdownMins        Int      @default(34)
+  countdownSecs        Int      @default(42)
+  welcomeBadge         String   @default("Welcome Address")
+  welcomeTitle         String   @default("Nomoshkar & Warm Greetings")
+  welcomeShloka        String   @default("“Sarva mangala mangalye shive sarvartha sadhike,\nSharanye tryambake gauri narayani namostute.”")
+  welcomeShlokaRef     String   @default("— Sri Sri Chandi Stotram")
+  welcomeMessage       String   @default("With the soothing autumn breeze carrying the resonance of the sacred Kash flowers and festive conch shells, the Sri Sarbojanin Mandir Samiti cordially requests the gracious presence of you and your family for our 42nd annual Sharodotsav. Let us unite in prayer, devotion, and community fellowship.")
+  signatoryName        String   @default("Dr. Partha Sarathi Roy")
+  signatoryTitle       String   @default("General Secretary, Mandir Samiti")
+  bhogBadge            String   @default("ALL DEVOTEES")
+  bhogSubtitle         String   @default("Maha Prasadam")
+  bhogTitle            String   @default("Community Bhog Dining")
+  bhogTiming           String   @default("Warm consecrated satvik feast served daily on fresh sal leaf plates from 1:00 PM to 3:30 PM.")
+  bhogNotice           String   @default("Digital Token counters open 11:30 AM daily")
+  donationTitle        String   @default("Seva & Community Contributions")
+  donationSubtitle     String   @default("Devotee Offerings")
+  donationDescription  String   @default("Support the daily flower offerings, earthen lamp oils, and charitable bhog distributions for underprivileged families.")
+  upiId                String   @default("mandir.seva@sbi")
+  footerTitle          String   @default("Shubho Sharodiya!")
+  footerBlessing       String   @default("May Mother Durga bless your household with happiness, prosperity, peace, and eternal joy.")
+  registeredTrustNo    String   @default("Sri Sri Sarbojanin Durga Puja Samiti • Reg. Trust No. 412/WB/1982")
+  whatsappShareMessage String   @default("🌺 Shubho Sharodiya! You and your family are cordially invited to the 42nd Annual Durga Puja celebration at Sri Sri Sarbojanin Mandir, Ballygunge. Please view the rituals schedule, bhog menu, and digital pushpanjali token pass here!")
+  primaryColor         String   @default("#7a0009")
+  secondaryColor       String   @default("#904d00")
+  surfaceColor         String   @default("#fff8f4")
+  updatedAt            DateTime @updatedAt
+}
+
+model Section {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  name      String
+  order     Int      @default(0)
+  isVisible Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model HeritagePillar {
+  id        String   @id @default(cuid())
+  title     String
+  subtitle  String
+  icon      String
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model ScheduleDay {
+  id        String         @id @default(cuid())
+  dayKey    String         @unique
+  dayName   String
+  dateLabel String
+  order     Int            @default(0)
+  items     ScheduleItem[]
+  createdAt DateTime       @default(now())
+  updatedAt DateTime       @updatedAt
+}
+
+model ScheduleItem {
+  id          String      @id @default(cuid())
+  dayId       String
+  day         ScheduleDay @relation(fields: [dayId], references: [id], onDelete: Cascade)
+  tag         String      @default("DAWN")
+  time        String
+  title       String?
+  description String
+  priest      String?
+  hasReminder Boolean     @default(false)
+  order       Int         @default(0)
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+}
+
+model GalleryImage {
+  id        String   @id @default(cuid())
+  title     String
+  subtitle  String
+  url       String
+  altText   String?
+  isWide    Boolean  @default(false)
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model BhogItem {
+  id          String   @id @default(cuid())
+  name        String
+  description String
+  icon        String   @default("rice_bowl")
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model CulturalEvent {
+  id        String   @id @default(cuid())
+  month     String   @default("OCT")
+  day       String
+  title     String
+  detail    String
+  icon      String   @default("theater_comedy")
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model TransitOption {
+  id        String   @id @default(cuid())
+  title     String
+  detail    String
+  icon      String   @default("subway")
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model DaanTier {
+  id        String   @id @default(cuid())
+  amount    Int
+  label     String
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model RSVP {
+  id         String   @id @default(cuid())
+  tokenCode  String   @unique
+  name       String
+  phone      String
+  members    Int      @default(2)
+  ritual     String
+  notes      String?
+  createdAt  DateTime @default(now())
+}
+
+model GuestInvite {
+  id              String   @id @default(cuid())
+  slug            String   @unique
+  guestName       String
+  personalMessage String?
+  viewsCount      Int      @default(0)
+  isFamily        Boolean  @default(true)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}

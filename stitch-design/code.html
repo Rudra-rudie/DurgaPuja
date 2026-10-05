@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;family=Plus+Jakarta+Sans:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-primary-fixed-variant": "#8f0e12", "secondary-fixed-dim": "#ffb77d", "background": "#fff8f4", "surface-variant": "#e9e1dc", "outline-variant": "#e1bebb", "tertiary-container": "#932c2a", "surface-container-low": "#faf2ed", "on-tertiary-fixed": "#410004", "on-primary": "#ffffff", "inverse-primary": "#ffb4ac", "inverse-surface": "#33302c", "on-surface-variant": "#59413e", "primary-container": "#9e1b1b", "secondary": "#904d00", "error": "#ba1a1a", "surface-bright": "#fff8f4", "error-container": "#ffdad6", "tertiary": "#731416", "tertiary-fixed": "#ffdad7", "on-background": "#1e1b18", "surface-dim": "#e0d9d3", "on-primary-fixed": "#410002", "on-tertiary-fixed-variant": "#852221", "surface-container-lowest": "#ffffff", "on-error": "#ffffff", "secondary-fixed": "#ffdcc3", "primary": "#7a0009", "surface-tint": "#b22a27", "outline": "#8d706d", "on-primary-container": "#ffafa7", "on-error-container": "#93000a", "on-secondary": "#ffffff", "surface-container-high": "#eee7e1", "surface-container": "#f4ece7", "primary-fixed-dim": "#ffb4ac", "on-tertiary": "#ffffff", "inverse-on-surface": "#f7efea", "primary-fixed": "#ffdad6", "surface": "#fff8f4", "tertiary-fixed-dim": "#ffb3ad", "secondary-container": "#fe932c", "on-secondary-fixed": "#2f1500", "surface-container-highest": "#e9e1dc", "on-secondary-fixed-variant": "#6e3900", "on-tertiary-container": "#ffafa9", "on-secondary-container": "#663500", "on-surface": "#1e1b18" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin-desktop": "3rem", "gutter-tablet": "1.5rem", "space-xs": "0.25rem", "gutter-desktop": "2rem", "space-lg": "1.5rem", "gutter": "1rem", "space-md": "1rem", "space-sm": "0.5rem", "space-xl": "2.5rem", "margin": "1rem", "margin-tablet": "2rem" }, fontFamily: { "headline-sm": ["Playfair Display"], "label-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "title-md": ["Noto Serif"], "headline-lg": ["Playfair Display"], "title-lg": ["Noto Serif"], "headline-md": ["Playfair Display"], "body-md": ["Noto Serif"], "body-lg": ["Noto Serif"], "display-lg-mobile": ["Playfair Display"], "body-sm": ["Noto Serif"], "display-lg": ["Playfair Display"], "headline-lg-mobile": ["Playfair Display"], "title-sm": ["Noto Serif"] }, fontSize: { "headline-sm": ["22px", { "lineHeight": "30px", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" }], "title-md": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "0em", "fontWeight": "700" }], "title-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-20 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Sri Sri Sharodiya Utsav Mandir Emblem" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWjzNgGYLeZXEQvCUQQTjVIaJ4RuNwA6Dj3GVnKCyTRQ0Wunp042wB3EQzU2ylQNOQOZ8IfT9hiC0by2a8BEgZ7btvm_FjVnysBdqB0Tk4RET2mUEunfVEcOPTCb287JZie0EIFlLqVdfrP8b3Hzdh45UVsNrAp5NIlTiAnkfy9phz_Rw_r4hEwwuc6-ZHFMCKiG6x5E87vodBOQ-UeazgCIThXd471vRQY4CLXD2dGXtexrxfUrZ8eQ"/><div class="flex flex-col min-w-0"><span class="font-label-sm text-secondary tracking-widest uppercase truncate">Sri Sri Sarbojanin Durga Puja</span><span class="font-title-sm text-primary truncate leading-tight">Puja Invitation</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Toggle Maha Dhaak Sound" class="h-11 px-space-sm rounded-full bg-surface-container flex items-center gap-space-xs text-on-surface hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[18px] text-secondary">music_note</span><span class="font-label-sm text-on-surface font-semibold">Dhaak</span></button><button aria-label="Multilingual Toggle" class="h-11 px-space-xs rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors font-label-sm font-semibold"><span class="px-1 text-primary">EN</span><span class="text-outline/40">|</span><span class="px-1 text-on-surface-variant">BN</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-20 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Festive Hero Section -->
+<div class="relative w-full overflow-hidden bg-primary-container text-on-primary">
+<div class="relative h-[480px] w-full">
+<img alt="Maa Durga in full sanctum grandeur" class="w-full h-full object-cover object-top opacity-90 brightness-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_ye281hwxzD13wojKbAiM_2Eul_BJZw3ZMhWoGP_cGnza7GVIyZAblszm7gvrKmu8vwD7CZKR3-XzqswBYGqIs3FRXLgGIVm9cOwV68Yp5K-Zs3xgUWExs8Fxi66oPajYYBcwGySZoX4ba-JNkZzRoxDnhuWi9iidtGZFheB-O3WktXZJHywzOjN6gA_mBeBQSf-pYQucbFJ1tkSD0AfJnRBU7hYe_pNPNDpq0DxG7h6ZosBWNBXgtA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-primary/70 via-transparent to-transparent"></div>
+<!-- Top Overlay Badges -->
+<div class="absolute top-4 left-4 right-4 flex items-center justify-between">
+<div class="flex items-center gap-2 bg-surface/90 backdrop-blur-md px-3 py-1.5 rounded-full shadow-md">
+<img alt="Sacred Emblem" class="w-6 h-6 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWjzNgGYLeZXEQvCUQQTjVIaJ4RuNwA6Dj3GVnKCyTRQ0Wunp042wB3EQzU2ylQNOQOZ8IfT9hiC0by2a8BEgZ7btvm_FjVnysBdqB0Tk4RET2mUEunfVEcOPTCb287JZie0EIFlLqVdfrP8b3Hzdh45UVsNrAp5NIlTiAnkfy9phz_Rw_r4hEwwuc6-ZHFMCKiG6x5E87vodBOQ-UeazgCIThXd471vRQY4CLXD2dGXtexrxfUrZ8eQ"/>
+<span class="font-label-sm text-primary uppercase font-bold tracking-wider">1431 Bangabda</span>
+</div>
+<div class="flex items-center gap-1.5 bg-surface/90 backdrop-blur-md p-1 rounded-full shadow-md">
+<button class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm font-bold">EN</button>
+<button class="px-2 py-1 rounded-full text-on-surface-variant font-label-sm font-semibold hover:text-primary">BN</button>
+<button class="px-2 py-1 rounded-full text-on-surface-variant font-label-sm font-semibold hover:text-primary">HI</button>
+</div>
+</div>
+<!-- Hero Copy -->
+<div class="absolute bottom-6 left-4 right-4 flex flex-col gap-2">
+<div class="inline-flex items-center gap-1.5 self-start px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm">
+<span class="material-symbols-outlined text-[14px]">wb_twilight</span>
+<span>Sharodiya Maha Utsav</span>
+</div>
+<h1 class="font-headline-lg-mobile text-on-primary leading-tight drop-shadow-md">
+          Sri Sri Sharodotsav Mandir Nimontron
+        </h1>
+<p class="font-body-sm text-primary-fixed-dim line-clamp-2 drop-shadow">
+          You and your family are cordially invited to the 42nd Annual Autumnal Sanctum Celebration.
+        </p>
+<!-- Sound Pulse Interaction Pill -->
+<div class="flex items-center justify-between pt-2">
+<button class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface/85 backdrop-blur-md text-primary font-label-sm font-bold hover:bg-surface transition-all shadow-sm" id="dhaakHeroBtn">
+<span class="material-symbols-outlined text-[16px] text-secondary">graphic_eq</span>
+<span id="dhaakText">Listen to Live Dhaak Rhythms</span>
+</button>
+<div class="flex items-center gap-1 text-secondary-fixed text-label-sm">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>Ballygunge, Kolkata</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Festive Live Countdown Timer Bar -->
+<div class="bg-primary px-4 py-3 text-center">
+<div class="flex items-center justify-center gap-1 mb-2 text-secondary-fixed">
+<span class="material-symbols-outlined text-[16px]">notifications_active</span>
+<span class="font-label-sm uppercase tracking-wider font-semibold">Maha Sasthi Countdown</span>
+</div>
+<div class="grid grid-cols-4 gap-2 max-w-xs mx-auto">
+<div class="bg-surface-container-lowest/15 backdrop-blur-sm rounded-lg py-1.5 flex flex-col items-center">
+<span class="font-headline-sm text-on-primary leading-tight" id="timer-days">04</span>
+<span class="font-label-sm text-primary-fixed-dim text-[10px]">DAYS</span>
+</div>
+<div class="bg-surface-container-lowest/15 backdrop-blur-sm rounded-lg py-1.5 flex flex-col items-center">
+<span class="font-headline-sm text-on-primary leading-tight" id="timer-hours">18</span>
+<span class="font-label-sm text-primary-fixed-dim text-[10px]">HOURS</span>
+</div>
+<div class="bg-surface-container-lowest/15 backdrop-blur-sm rounded-lg py-1.5 flex flex-col items-center">
+<span class="font-headline-sm text-on-primary leading-tight" id="timer-mins">34</span>
+<span class="font-label-sm text-primary-fixed-dim text-[10px]">MINS</span>
+</div>
+<div class="bg-surface-container-lowest/15 backdrop-blur-sm rounded-lg py-1.5 flex flex-col items-center">
+<span class="font-headline-sm text-on-primary leading-tight" id="timer-secs">42</span>
+<span class="font-label-sm text-primary-fixed-dim text-[10px]">SECS</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Invitation Letter & Sacred Verse -->
+<div class="px-4 py-6 flex flex-col gap-4">
+<div class="relative bg-surface-container-low p-5 rounded-xl shadow-md overflow-hidden">
+<!-- Ornate Accent -->
+<div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-secondary-container/20 to-transparent pointer-events-none rounded-bl-full"></div>
+<div class="flex items-center gap-3 mb-3">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+<img alt="Mandir Crest" class="w-7 h-7 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWjzNgGYLeZXEQvCUQQTjVIaJ4RuNwA6Dj3GVnKCyTRQ0Wunp042wB3EQzU2ylQNOQOZ8IfT9hiC0by2a8BEgZ7btvm_FjVnysBdqB0Tk4RET2mUEunfVEcOPTCb287JZie0EIFlLqVdfrP8b3Hzdh45UVsNrAp5NIlTiAnkfy9phz_Rw_r4hEwwuc6-ZHFMCKiG6x5E87vodBOQ-UeazgCIThXd471vRQY4CLXD2dGXtexrxfUrZ8eQ"/>
+</div>
+<div>
+<span class="font-label-sm text-secondary font-bold uppercase tracking-widest block">Welcome Address</span>
+<h2 class="font-title-md text-primary leading-tight">Nomoshkar &amp; Warm Greetings</h2>
+</div>
+</div>
+<!-- Sanskrit Shloka Block -->
+<div class="bg-surface-container p-3 rounded-lg text-center my-2 shadow-sm">
+<p class="font-title-sm text-primary italic leading-relaxed">
+          “Sarva mangala mangalye shive sarvartha sadhike, <br/>
+          Sharanye tryambake gauri narayani namostute.”
+        </p>
+<span class="font-label-sm text-on-surface-variant block mt-1 text-[11px]">— Sri Sri Chandi Stotram</span>
+</div>
+<p class="font-body-md text-on-surface leading-relaxed mt-2">
+        With the soothing autumn breeze carrying the resonance of the sacred Kash flowers and festive conch shells, the <strong>Sri Sarbojanin Mandir Samiti</strong> cordially requests the gracious presence of you and your family for our 42nd annual Sharodotsav. Let us unite in prayer, devotion, and community fellowship.
+      </p>
+<div class="flex items-center justify-between pt-4 mt-2">
+<div>
+<p class="font-title-sm text-primary font-bold">Dr. Partha Sarathi Roy</p>
+<p class="font-body-sm text-on-surface-variant text-[12px]">General Secretary, Mandir Samiti</p>
+</div>
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[24px]">verified</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Mandir Heritage & Pillars -->
+<div class="px-4 pb-6">
+<div class="flex items-center justify-between mb-3">
+<div>
+<span class="font-label-sm text-secondary font-bold uppercase tracking-wider">Tradition &amp; Service</span>
+<h2 class="font-title-lg text-primary">Mandir Heritage Pillars</h2>
+</div>
+<span class="material-symbols-outlined text-secondary text-[22px]">auto_awesome</span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<div class="bg-surface-container-low p-3 rounded-xl flex flex-col items-center text-center shadow-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">auto_stories</span>
+</div>
+<span class="font-title-sm text-primary font-bold">42 Yrs</span>
+<span class="font-label-sm text-on-surface-variant text-[11px] leading-tight">Vedic Rituals</span>
+</div>
+<div class="bg-surface-container-low p-3 rounded-xl flex flex-col items-center text-center shadow-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">soup_kitchen</span>
+</div>
+<span class="font-title-sm text-primary font-bold">15,000+</span>
+<span class="font-label-sm text-on-surface-variant text-[11px] leading-tight">Annadaan Bhog</span>
+</div>
+<div class="bg-surface-container-low p-3 rounded-xl flex flex-col items-center text-center shadow-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">palette</span>
+</div>
+<span class="font-title-sm text-primary font-bold">Kumartuli</span>
+<span class="font-label-sm text-on-surface-variant text-[11px] leading-tight">Clay Artistry</span>
+</div>
+</div>
+</div>
+<!-- Interactive Day-Wise Festival Timetable -->
+<div class="px-4 pb-6">
+<div class="flex items-center justify-between mb-3">
+<div>
+<span class="font-label-sm text-secondary font-bold uppercase tracking-wider">Festival Schedule</span>
+<h2 class="font-title-lg text-primary">Ritual &amp; Prayer Timings</h2>
+</div>
+<button class="flex items-center gap-1 text-primary font-label-sm font-semibold hover:underline">
+<span class="material-symbols-outlined text-[16px]">download</span>
+        PDF
+      </button>
+</div>
+<!-- Scrollable Day Tabs -->
+<div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none" id="schedule-tabs">
+<button class="schedule-tab shrink-0 px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-sm font-bold shadow-sm transition-all" id="tab-sasthi" onclick="switchTab('sasthi')">
+        Sasthi (Oct 20)
+      </button>
+<button class="schedule-tab shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface font-label-sm font-semibold transition-all" id="tab-saptami" onclick="switchTab('saptami')">
+        Saptami (Oct 21)
+      </button>
+<button class="schedule-tab shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface font-label-sm font-semibold transition-all" id="tab-ashtami" onclick="switchTab('ashtami')">
+        Maha Ashtami (Oct 22)
+      </button>
+<button class="schedule-tab shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface font-label-sm font-semibold transition-all" id="tab-navami" onclick="switchTab('navami')">
+        Maha Navami (Oct 23)
+      </button>
+<button class="schedule-tab shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface font-label-sm font-semibold transition-all" id="tab-dashami" onclick="switchTab('dashami')">
+        Vijaya Dashami (Oct 24)
+      </button>
+</div>
+<!-- Tab Contents -->
+<div class="mt-3 flex flex-col gap-3" id="tab-content">
+<!-- Default Sasthi Card Content -->
+<div class="bg-surface-container-low p-4 rounded-xl shadow-md flex flex-col gap-3">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-container font-label-sm font-bold text-[10px]">DAWN</span>
+<span class="font-title-sm text-primary font-bold">06:30 AM — Kalparambha</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px]">wb_sunny</span>
+</div>
+<p class="font-body-sm text-on-surface-variant">Solemn vow of the festival, initial invocation rituals, and sanctification of the mandir altar.</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl shadow-md flex flex-col gap-3">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-md bg-primary text-on-primary font-label-sm font-bold text-[10px]">EVENING</span>
+<span class="font-title-sm text-primary font-bold">07:00 PM — Bodhon &amp; Adhibas</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px]">flare</span>
+</div>
+<p class="font-body-sm text-on-surface-variant">Divine awakening of the goddess beneath the Bilva tree, followed by deep rhythmic Dhaak beats and evening Arati.</p>
+<div class="flex items-center justify-between pt-2">
+<span class="font-label-sm text-secondary font-semibold">Head Priest: Pandit S. Bannerjee</span>
+<button class="px-2.5 py-1 rounded-md bg-surface-container text-primary font-label-sm font-semibold flex items-center gap-1 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[14px]">calendar_add_on</span>
+            Reminder
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Sanctum Darshan Gallery -->
+<div class="px-4 pb-6">
+<div class="flex items-center justify-between mb-3">
+<div>
+<span class="font-label-sm text-secondary font-bold uppercase tracking-wider">Visual Chronicle</span>
+<h2 class="font-title-lg text-primary">Darshan &amp; Sacred Artistry</h2>
+</div>
+<span class="font-label-sm text-secondary font-semibold">1430 Archives</span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="relative h-44 rounded-xl overflow-hidden shadow-md group">
+<img class="w-full h-full object-cover" data-alt="Close up devotional capture of Goddess Durga idol with exquisite golden jewelry, chandan forehead paste, traditional Bengali large eyes, surrounded by soft glowing brass lamps and fresh lotus flowers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUjHura0knALlXM2R8kxcuf93TyBw25H-8nIgS5fkn7hjxBSUTlaFdPF2a7UD8lVWnhVTO2acude_pIJ1OZom656K2oOd_Pf3zltlnzJxZ89SQ9beeAYbnJpcietN7NahwcGaGkmQ9pGy5Knti_qGzPQSpXuLS8_OdBZa8leRjBeN06dkf4lph-Btb6gy9vFr6qZFIQ_ClTM915HPbzB6Y8sSZvbAAGrq6zA05E7AMktdFMHnYktxawA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-2 right-2">
+<span class="font-label-sm text-on-primary font-bold block">Sanctum Murti</span>
+<span class="font-body-sm text-primary-fixed-dim text-[11px]">Kumartuli Clay Craft</span>
+</div>
+</div>
+<div class="relative h-44 rounded-xl overflow-hidden shadow-md group">
+<img class="w-full h-full object-cover" data-alt="Traditional Bengali Dhunuchi dance during evening Durga Puja arati with fragrant smoke billowing from earthen censers, glowing embers, and dynamic cultural celebration" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBk_iCyNGklVbC9h3iWaHAYy_76XZ0q3LQyROdn8ItqTuWeeI9e5YEDKs2UgulNaSgmYzDbMbVEAw81seKlGYbgjnIK1R5yIt8Ma9u2eaT_bI8ty4pkybaTskC3vxGA3vC8kXYUHiI-BVrMr4YwC-ufTFSZuas_Y5vhK22fbI-JH3xlSs8UoFtyVtaT3yFIiFsGqZB1F77LtvM4B4Xaox1Gc706g0SqlKNJwuSKlENjHVDDTaczASMWqg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-2 right-2">
+<span class="font-label-sm text-on-primary font-bold block">Dhunuchi Arati</span>
+<span class="font-body-sm text-primary-fixed-dim text-[11px]">Evening Devotion</span>
+</div>
+</div>
+</div>
+<!-- Wide Alpona Feature Image -->
+<div class="relative h-32 mt-3 rounded-xl overflow-hidden shadow-md">
+<img class="w-full h-full object-cover" data-alt="Intricate traditional Bengali white rice paste Alpona floral floor art in red terracotta temple courtyard with brass oil diyas lit around festive borders" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrHq5gSrqw8j43aOblyZoA_wILzhoGdUFzVTKe20qhU-Ep71Dws7EzrEQb3B_9G3M6kkewBMlK3T37WojNFp6iFoPDZMqgMNRSuDkPsme2OMWb33e_3ihLqV6RoLBY88bQkFqedRNBCe5QHo_9WyWpI1Whb8Z0IcbZnkgO8LAi2T5sxP52M3yP9Ox2hlW7I-SH8sfMwFttnaiOw6DK64RBBEMrhkyanIpKLAM7raJ1gSKGpWI5vfdGHQ"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/40 to-transparent"></div>
+<div class="absolute left-4 top-1/2 -translate-y-1/2 max-w-[200px]">
+<span class="font-label-sm text-secondary-fixed uppercase tracking-wider font-bold">Pandal Craft</span>
+<p class="font-title-sm text-on-primary font-bold leading-snug">Hand-drawn Rice Flour Alpona Pavilions</p>
+</div>
+</div>
+</div>
+<!-- Consecrated Prasadam & Bhog Dining -->
+<div class="px-4 pb-6">
+<div class="bg-surface-container-low p-4 rounded-xl shadow-md">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[18px]">restaurant</span>
+</div>
+<div>
+<span class="font-label-sm text-secondary uppercase font-bold tracking-wider">Maha Prasadam</span>
+<h3 class="font-title-md text-primary">Community Bhog Dining</h3>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm font-bold text-[10px]">ALL DEVOTEES</span>
+</div>
+<p class="font-body-sm text-on-surface-variant mb-4">
+        Warm consecrated satvik feast served daily on fresh sal leaf plates from 1:00 PM to 3:30 PM.
+      </p>
+<div class="grid grid-cols-2 gap-2 mb-4">
+<div class="bg-surface-container p-2.5 rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">rice_bowl</span>
+<div>
+<p class="font-label-md text-primary font-bold">Gobindobhog Khichuri</p>
+<p class="font-body-sm text-on-surface-variant text-[11px]">Ghee roasted lentils</p>
+</div>
+</div>
+<div class="bg-surface-container p-2.5 rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">nutrition</span>
+<div>
+<p class="font-label-md text-primary font-bold">Labra Tarkari</p>
+<p class="font-body-sm text-on-surface-variant text-[11px]">Autumn spiced medley</p>
+</div>
+</div>
+<div class="bg-surface-container p-2.5 rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">bakery_dining</span>
+<div>
+<p class="font-label-md text-primary font-bold">Chhanar Payesh</p>
+<p class="font-body-sm text-on-surface-variant text-[11px]">Cardamom infused</p>
+</div>
+</div>
+<div class="bg-surface-container p-2.5 rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">tapas</span>
+<div>
+<p class="font-label-md text-primary font-bold">Tomato Chutney</p>
+<p class="font-body-sm text-on-surface-variant text-[11px]">Dates &amp; crisp papad</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-highest/60 p-3 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">confirmation_number</span>
+<span class="font-label-sm text-on-surface font-semibold">Digital Token counters open 11:30 AM daily</span>
+</div>
+<a class="font-label-sm text-primary font-bold hover:underline" href="#rsvp-section">Reserve Slot →</a>
+</div>
+</div>
+</div>
+<!-- Cultural Evening Highlights -->
+<div class="px-4 pb-6">
+<div class="flex items-center justify-between mb-3">
+<div>
+<span class="font-label-sm text-secondary font-bold uppercase tracking-wider">Rangamancha</span>
+<h2 class="font-title-lg text-primary">Cultural Performances</h2>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px]">theater_comedy</span>
+</div>
+<div class="space-y-2.5">
+<div class="bg-surface-container-low p-3.5 rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex flex-col items-center justify-center shrink-0">
+<span class="font-label-sm text-secondary font-bold">OCT</span>
+<span class="font-title-sm text-primary font-bold leading-none">21</span>
+</div>
+<div>
+<h4 class="font-title-sm text-primary font-bold">Agomoni Sangeet Recital</h4>
+<p class="font-body-sm text-on-surface-variant text-[12px]">Swarnali Sen &amp; Mandir Choir • 8:00 PM</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px]">music_note</span>
+</div>
+<div class="bg-surface-container-low p-3.5 rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex flex-col items-center justify-center shrink-0">
+<span class="font-label-sm text-secondary font-bold">OCT</span>
+<span class="font-title-sm text-primary font-bold leading-none">23</span>
+</div>
+<div>
+<h4 class="font-title-sm text-primary font-bold">Maha Dhunuchi Dance Arena</h4>
+<p class="font-body-sm text-on-surface-variant text-[12px]">Inter-Para Championship • 7:30 PM</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px]">local_fire_department</span>
+</div>
+</div>
+</div>
+<!-- Location & Route Guide -->
+<div class="px-4 pb-6">
+<div class="flex items-center justify-between mb-3">
+<div>
+<span class="font-label-sm text-secondary font-bold uppercase tracking-wider">How to Reach</span>
+<h2 class="font-title-lg text-primary">Mandir Pavilion Location</h2>
+</div>
+<span class="material-symbols-outlined text-secondary text-[22px]">map</span>
+</div>
+<!-- Map Trigger Card -->
+<div class="w-full h-44 bg-cover bg-center rounded-xl shadow-md relative overflow-hidden flex flex-col justify-end p-3" data-location="Ballygunge Circular Road, Kolkata, West Bengal, India" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA9QqkqMCw-La0I_YiY2Vmfgx5znXI-hHWpxqIOhmB0nuDhyGMr7gK8QE174H6tnALki3lPK2gFszTcR4AZUQF_q6iy0LQ8Zmg5eyDf7QZ0of3THleXIDcB-aj4ild_dMv3dJO9nVDp-IbwXNak3cRm1QT5t3b5OLaPhdyjY8ntFHbjqzloNMGLeiTP5bZKxCO5Axp8KW-LYLlpa0aHpGkd8RZjqfzPgDPE3HCTHwvxN9MFDuUm2OApJQ')">
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/80 via-on-background/20 to-transparent"></div>
+<div class="relative z-10 flex items-center justify-between">
+<div>
+<span class="font-label-sm text-secondary-fixed font-bold">Mandir Grounds</span>
+<p class="font-title-sm text-on-primary font-bold">24A Ballygunge Circular Rd</p>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm font-bold flex items-center gap-1 shadow hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">directions</span>
+          Directions
+        </button>
+</div>
+</div>
+<!-- Transit Suggestions -->
+<div class="grid grid-cols-2 gap-2 mt-3">
+<div class="bg-surface-container-low p-2.5 rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">subway</span>
+<div>
+<p class="font-label-sm text-primary font-bold">Kalighat Metro</p>
+<p class="font-body-sm text-on-surface-variant text-[11px]">8 mins via auto / e-rickshaw</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">local_parking</span>
+<div>
+<p class="font-label-sm text-primary font-bold">Devotee Parking</p>
+<p class="font-body-sm text-on-surface-variant text-[11px]">Gate No. 3 Pavilion Slot</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Devotee RSVP & Pushpanjali Pass Registration -->
+<div class="px-4 pb-6" id="rsvp-section">
+<div class="bg-surface-container-low p-5 rounded-2xl shadow-lg relative overflow-hidden">
+<!-- Top Filigree Accent -->
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-secondary text-[18px]">how_to_reg</span>
+<span class="font-label-sm text-secondary uppercase font-bold tracking-widest">Digital E-Pass</span>
+</div>
+<h2 class="font-title-lg text-primary mb-1">RSVP &amp; Pushpanjali Booking</h2>
+<p class="font-body-sm text-on-surface-variant mb-4">
+        Reserve your family prayer slots to ensure seating in the sanctum mandap without queue delays.
+      </p>
+<form class="flex flex-col gap-3.5" id="rsvp-form" onsubmit="event.preventDefault(); submitRSVP();">
+<div>
+<label class="font-label-sm text-on-surface font-semibold block mb-1">Devotee / Head of Family Name</label>
+<input class="w-full px-3 py-2 rounded-lg bg-surface font-body-sm text-on-surface placeholder:text-outline/50 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary" id="rsvp-name" placeholder="e.g. Subhashish Mukhopadhyay" required="" type="text"/>
+</div>
+<div>
+<label class="font-label-sm text-on-surface font-semibold block mb-1">WhatsApp Mobile Contact</label>
+<input class="w-full px-3 py-2 rounded-lg bg-surface font-body-sm text-on-surface placeholder:text-outline/50 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary" id="rsvp-phone" placeholder="+91 98300 00000" required="" type="tel"/>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div>
+<label class="font-label-sm text-on-surface font-semibold block mb-1">Family Members</label>
+<div class="flex items-center bg-surface rounded-lg p-1 shadow-sm">
+<button class="w-8 h-8 rounded bg-surface-container text-primary font-bold text-lg flex items-center justify-center" onclick="adjustCount(-1)" type="button">-</button>
+<span class="flex-1 text-center font-title-sm text-primary font-bold" id="devotee-count">2</span>
+<button class="w-8 h-8 rounded bg-surface-container text-primary font-bold text-lg flex items-center justify-center" onclick="adjustCount(1)" type="button">+</button>
+</div>
+</div>
+<div>
+<label class="font-label-sm text-on-surface font-semibold block mb-1">Preferred Ritual</label>
+<select class="w-full h-10 px-2.5 rounded-lg bg-surface font-body-sm text-on-surface shadow-sm focus:outline-none focus:ring-2 focus:ring-primary" id="rsvp-slot">
+<option value="ashtami-pushpanjali">Ashtami Pushpanjali (09:30 AM)</option>
+<option value="sandhi-puja">Sandhi Puja Darshan (05:45 PM)</option>
+<option value="navami-homa">Navami Maha Homa (11:00 AM)</option>
+<option value="sindoor-khela">Sindoor Khela (10:00 AM)</option>
+</select>
+</div>
+</div>
+<button class="w-full py-3 mt-2 rounded-xl bg-primary text-on-primary font-title-sm font-semibold flex items-center justify-center gap-2 shadow-md hover:bg-primary-container active:scale-[0.98] transition-all" type="submit">
+<span class="material-symbols-outlined text-[20px]">confirmation_number</span>
+          Confirm &amp; Generate Digital Pass
+        </button>
+</form>
+<!-- Success State Modal / Placeholder Card -->
+<div class="hidden mt-4 p-4 rounded-xl bg-secondary-fixed text-on-secondary-fixed shadow-md flex-col gap-2" id="rsvp-success">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[24px] text-secondary">check_circle</span>
+<span class="font-title-sm font-bold">Pass Generated Successfully!</span>
+</div>
+<p class="font-body-sm text-[13px]">
+          Your token pass for <span class="font-bold" id="conf-name"></span> has been queued. An entry QR code is dispatched to your WhatsApp number.
+        </p>
+<div class="bg-surface/80 p-2.5 rounded-lg flex items-center justify-between mt-1">
+<span class="font-label-sm text-primary font-mono font-bold tracking-widest">TOKEN: #PUJA-1431-8902</span>
+<button class="font-label-sm text-secondary font-bold underline" onclick="shareInviteWhatsApp()">Share Pass</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Seva, Daan & Sacred Offerings -->
+<div class="px-4 pb-6">
+<div class="bg-surface-container p-4 rounded-xl shadow-md">
+<div class="flex items-center justify-between mb-3">
+<div>
+<span class="font-label-sm text-secondary font-bold uppercase tracking-wider">Devotee Offerings</span>
+<h3 class="font-title-md text-primary">Seva &amp; Community Contributions</h3>
+</div>
+<span class="material-symbols-outlined text-secondary text-[22px]">volunteer_activism</span>
+</div>
+<p class="font-body-sm text-on-surface-variant mb-3">
+        Support the daily flower offerings, earthen lamp oils, and charitable bhog distributions for underprivileged families.
+      </p>
+<div class="grid grid-cols-3 gap-2 mb-3">
+<button class="daan-btn p-2 rounded-lg bg-surface text-primary font-label-sm font-bold shadow-sm hover:bg-primary hover:text-on-primary transition-all text-center" onclick="selectDaan(501)">
+          ¤ 501<br/><span class="font-body-sm text-[10px] font-normal text-on-surface-variant">Pushpanjali</span>
+</button>
+<button class="daan-btn p-2 rounded-lg bg-surface text-primary font-label-sm font-bold shadow-sm hover:bg-primary hover:text-on-primary transition-all text-center" onclick="selectDaan(1101)">
+          ¤ 1,101<br/><span class="font-body-sm text-[10px] font-normal text-on-surface-variant">108 Diyas</span>
+</button>
+<button class="daan-btn p-2 rounded-lg bg-surface text-primary font-label-sm font-bold shadow-sm hover:bg-primary hover:text-on-primary transition-all text-center" onclick="selectDaan(2501)">
+          ¤ 2,501<br/><span class="font-body-sm text-[10px] font-normal text-on-surface-variant">Annadaan Seva</span>
+</button>
+</div>
+<div class="flex items-center justify-between bg-surface p-2.5 rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">account_balance</span>
+<span class="font-label-sm text-on-surface font-semibold">UPI: <span class="font-mono text-primary font-bold">mandir.seva@sbi</span></span>
+</div>
+<button class="px-2.5 py-1 rounded bg-surface-container-high text-primary font-label-sm font-bold hover:bg-primary hover:text-on-primary transition-colors" id="copy-upi-btn" onclick="copyUPI()">
+          Copy
+        </button>
+</div>
+</div>
+</div>
+<!-- Festive Greetings Banner & WhatsApp Share Bar -->
+<div class="px-4 pb-8 flex flex-col items-center text-center gap-3">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center">
+<img alt="Mandir Crest" class="w-8 h-8 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWjzNgGYLeZXEQvCUQQTjVIaJ4RuNwA6Dj3GVnKCyTRQ0Wunp042wB3EQzU2ylQNOQOZ8IfT9hiC0by2a8BEgZ7btvm_FjVnysBdqB0Tk4RET2mUEunfVEcOPTCb287JZie0EIFlLqVdfrP8b3Hzdh45UVsNrAp5NIlTiAnkfy9phz_Rw_r4hEwwuc6-ZHFMCKiG6x5E87vodBOQ-UeazgCIThXd471vRQY4CLXD2dGXtexrxfUrZ8eQ"/>
+</div>
+<div>
+<h3 class="font-headline-sm text-primary">Shubho Sharodiya!</h3>
+<p class="font-body-sm text-on-surface-variant max-w-xs mx-auto">
+        May Mother Durga bless your household with happiness, prosperity, peace, and eternal joy.
+      </p>
+</div>
+<!-- Quick Share Action Button -->
+<div class="w-full flex items-center gap-2 mt-2">
+<button class="flex-1 py-3 px-4 rounded-xl bg-secondary-container text-on-secondary-container font-title-sm font-semibold flex items-center justify-center gap-2 shadow hover:bg-secondary-fixed-dim transition-all" onclick="shareInviteWhatsApp()">
+<span class="material-symbols-outlined text-[20px]">share</span>
+        Share Invitation on WhatsApp
+      </button>
+<a class="py-3 px-4 rounded-xl bg-primary text-on-primary font-title-sm font-semibold flex items-center justify-center gap-1 shadow hover:bg-primary-container transition-all" href="#rsvp-section">
+<span class="material-symbols-outlined text-[20px]">bookmark</span>
+        RSVP
+      </a>
+</div>
+<span class="font-label-sm text-outline text-[11px] mt-2">
+      Sri Sri Sarbojanin Durga Puja Samiti • Reg. Trust No. 412/WB/1982
+    </span>
+</div>
+</div>
+<script>
+  // Tab Switching Logic for Festival Schedule
+  const scheduleData = {
+    sasthi: [
+      { tag: "DAWN", time: "06:30 AM — Kalparambha", desc: "Solemn vow of the festival, initial invocation rituals, and sanctification of the mandir altar." },
+      { tag: "EVENING", time: "07:00 PM — Bodhon & Adhibas", desc: "Divine awakening of the goddess beneath the Bilva tree, followed by rhythmic Dhaak beats and evening Arati." }
+    ],
+    saptami: [
+      { tag: "MORNING", time: "06:00 AM — Nabapatrika Snan", desc: "Sacred bathing of the nine holy leaves at the holy Ganges waters, followed by Pratishtha in the pavilion." },
+      { tag: "FORENOON", time: "10:30 AM — Saptami Pushpanjali", desc: "Devotee morning floral prayers followed by distribution of morning fruit charnamrit." }
+    ],
+    ashtami: [
+      { tag: "MORNING", time: "09:30 AM — Maha Ashtami Pushpanjali", desc: "The most sacred pushpanjali batch offerings. Traditional white dhuti and saree attire requested." },
+      { tag: "AFTERNOON", time: "12:00 PM — Kumari Puja", desc: "Veneration of the young maiden as the living manifestation of the Supreme Divine Mother." },
+      { tag: "EVENING", time: "05:48 PM — Sandhi Puja", desc: "Sacred transition junction between Ashtami and Navami. Lighting of 108 clay pradips and 108 lotus blooms." }
+    ],
+    navami: [
+      { tag: "FORENOON", time: "11:00 AM — Maha Navami Homa", desc: "Grand sacred fire ritual seeking universal peace, warding off discord and negative energies." },
+      { tag: "NIGHT", time: "08:00 PM — Dhunuchi Naach Arena", desc: "Exhilarating incense dance performance honoring Mother Durga with live drum symphonies." }
+    ],
+    dashami: [
+      { tag: "MORNING", time: "10:00 AM — Sindoor Khela", desc: "Traditional vermillion blessing ceremony among married women, offering sweets and betel leaves to the Mother." },
+      { tag: "EVENING", time: "06:00 PM — Bishorjan & Shanti Jal", desc: "Ceremonial procession to the immersion ghats, sprinkling of sanctified peace waters (Shanti Jal)." }
+    ]
+  };
+
+  function switchTab(dayKey) {
+    document.querySelectorAll('.schedule-tab').forEach(el => {
+      el.classList.remove('bg-primary', 'text-on-primary');
+      el.classList.add('bg-surface-container', 'text-on-surface');
+    });
+
+    const activeTab = document.getElementById('tab-' + dayKey);
+    if (activeTab) {
+      activeTab.classList.remove('bg-surface-container', 'text-on-surface');
+      activeTab.classList.add('bg-primary', 'text-on-primary');
+    }
+
+    const container = document.getElementById('tab-content');
+    if (!container || !scheduleData[dayKey]) return;
+
+    container.innerHTML = scheduleData[dayKey].map(item => `
+      <div class="bg-surface-container-low p-4 rounded-xl shadow-md flex flex-col gap-3">
+        <div class="flex items-start justify-between">
+          <div class="flex items-center gap-2">
+            <span class="px-2 py-0.5 rounded-md ${item.tag === 'EVENING' ? 'bg-primary text-on-primary' : 'bg-secondary-container text-on-secondary-container'} font-label-sm font-bold text-[10px]">${item.tag}</span>
+            <span class="font-title-sm text-primary font-bold">${item.time}</span>
+          </div>
+          <span class="material-symbols-outlined text-secondary text-[20px]">flare</span>
+        </div>
+        <p class="font-body-sm text-on-surface-variant">${item.desc}</p>
+      </div>
+    `).join('');
+  }
+
+  // Interactive Counter for Family Members
+  let devoteeCounter = 2;
+  function adjustCount(delta) {
+    devoteeCounter = Math.max(1, Math.min(12, devoteeCounter + delta));
+    const counterEl = document.getElementById('devotee-count');
+    if (counterEl) counterEl.textContent = devoteeCounter;
+  }
+
+  // Form Submission
+  function submitRSVP() {
+    const name = document.getElementById('rsvp-name').value;
+    const phone = document.getElementById('rsvp-phone').value;
+    if (!name || !phone) return;
+
+    const successBox = document.getElementById('rsvp-success');
+    const confName = document.getElementById('conf-name');
+    if (confName) confName.textContent = name;
+    if (successBox) successBox.classList.remove('hidden');
+
+    successBox.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  // Live Countdown Simulation
+  let remainingSecs = 4 * 86400 + 18 * 3600 + 34 * 60 + 42;
+  setInterval(() => {
+    if (remainingSecs <= 0) return;
+    remainingSecs--;
+    const d = Math.floor(remainingSecs / 86400);
+    const h = Math.floor((remainingSecs % 86400) / 3600);
+    const m = Math.floor((remainingSecs % 3600) / 60);
+    const s = remainingSecs % 60;
+
+    const elD = document.getElementById('timer-days');
+    const elH = document.getElementById('timer-hours');
+    const elM = document.getElementById('timer-mins');
+    const elS = document.getElementById('timer-secs');
+
+    if (elD) elD.textContent = String(d).padStart(2, '0');
+    if (elH) elH.textContent = String(h).padStart(2, '0');
+    if (elM) elM.textContent = String(m).padStart(2, '0');
+    if (elS) elS.textContent = String(s).padStart(2, '0');
+  }, 1000);
+
+  // WhatsApp Share Trigger
+  function shareInviteWhatsApp() {
+    const message = encodeURIComponent("🌺 Shubho Sharodiya! You and your family are cordially invited to the 42nd Annual Durga Puja celebration at Sri Sri Sarbojanin Mandir, Ballygunge. Please view the rituals schedule, bhog menu, and digital pushpanjali token pass here!");
+    window.open("https://api.whatsapp.com/send?text=" + message, '_blank');
+  }
+
+  // Dhaak Sound Toggle Interaction
+  let isPlaying = false;
+  const dhaakBtn = document.getElementById('dhaakHeroBtn');
+  if (dhaakBtn) {
+    dhaakBtn.addEventListener('click', () => {
+      isPlaying = !isPlaying;
+      const textEl = document.getElementById('dhaakText');
+      if (textEl) {
+        textEl.textContent = isPlaying ? "Dhaak Playing (Rhythmic)" : "Listen to Live Dhaak Rhythms";
+      }
+      dhaakBtn.classList.toggle('ring-2');
+      dhaakBtn.classList.toggle('ring-secondary');
+    });
+  }
+
+  // UPI Copy helper
+  function copyUPI() {
+    navigator.clipboard?.writeText("mandir.seva@sbi");
+    const btn = document.getElementById('copy-upi-btn');
+    if (btn) {
+      btn.textContent = "Copied!";
+      setTimeout(() => { btn.textContent = "Copy"; }, 2000);
+    }
+  }
+
+  function selectDaan(val) {
+    const btn = document.getElementById('copy-upi-btn');
+    if (btn) btn.textContent = "Proceed INR " + val;
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(158,27,27,0.08)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-20 px-space-sm max-w-lg mx-auto"><a aria-current="page" class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] transition-all text-primary font-semibold" data-path="puja-invitation" href="#"><span class="material-symbols-outlined text-[24px]">temple_hindu</span><span class="font-label-sm text-label-sm">Invitation</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-primary transition-all" data-path="ritual-schedule" href="#"><span class="material-symbols-outlined text-[24px]">calendar_month</span><span class="font-label-sm text-label-sm">Schedule</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-primary transition-all" data-path="bhog-menu" href="#"><span class="material-symbols-outlined text-[24px]">restaurant</span><span class="font-label-sm text-label-sm">Bhog Menu</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-primary transition-all" data-path="pandal-directions" href="#"><span class="material-symbols-outlined text-[24px]">near_me</span><span class="font-label-sm text-label-sm">Directions</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-primary transition-all" data-path="mandir-rsvp" href="#"><span class="material-symbols-outlined text-[24px]">how_to_reg</span><span class="font-label-sm text-label-sm">RSVP</span></a></div></nav></body></html>
